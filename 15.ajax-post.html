@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajax Post</title>
+</head>
+
+<body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.js"
+    integrity="sha512-RjvSEaeDqPCfUVQ9kna2/2OqHz/7F04IOl1/66LmQjB/lOeAzwq7LrbTzDbz5cJzlPNJ5qteNtHR56XaJSTNWw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    async function sendPostRequest() {
+      let payload = {
+        name: 'John Doe',
+        email: 'johndoe@example.com'
+      };
+      let res = await axios.post('https://api.example.com/data', payload);
+      if (res.status === 200) {
+        // Do something with the response
+      } else {
+        alert("Wrong");
+      }
+    }
+
+    // Call the sendPostRequest()
+    sendPostRequest();
+  </script>
+</body>
+
+</html>

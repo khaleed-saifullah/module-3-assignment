@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <img id="myImage" src="image-1.jpg" onmouseover="changeImage('image-2.jpg')" onmouseout="changeImage('image-1.jpg')"
+    style="height: 500px; width: auto;">
+
+
+  <script>
+
+    // Answer : a
+
+    let xPos;
+    let yPos;
+
+    window.onclick = function (event) {
+      xPos = event.clientX;
+      yPos = event.clientY;
+      alert(`x = ${xPos} & y = ${yPos}`);
+    }
+
+
+    // Answer : b
+
+    window.addEventListener("keydown", event => alert("key = " + event.key));
+
+
+    // Answer : c
+
+    function changeImage(imageSource) {
+      var image = document.getElementById('myImage');
+      image.src = imageSource;
+    }
+
+
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM query selector</title>
+</head>
+
+<body>
+
+  <p class="specific-para">This is paragraph one</p>
+  <p class="para">This is paragraph two</p>
+  <p id="para3" class="specific-para">This is paragraph three</p>
+  <p id="para4">This is paragraph four</>
+    <button onclick="changeColor()" style="display: block;margin-top: 30px;">Change Color</button>
+
+    <script>
+      function changeColor() {
+        let paragraph = document.querySelectorAll(".specific-para");
+
+        for (let i = 0; i < paragraph.length; i++) {
+          paragraph[i].style.color = 'red';
+        }
+      }
+    </script>
+</body>
+
+</html>

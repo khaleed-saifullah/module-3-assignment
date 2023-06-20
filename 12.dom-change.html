@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Change</title>
+</head>
+<style>
+  #image {
+    display: block;
+    margin-bottom: 30px;
+    height: 500px;
+  }
+</style>
+
+<body>
+  <img id="image" src="image-1.jpg" alt="">
+  <button onclick="changeUrl()">Change Url</button>
+
+
+
+  <script>
+    function changeUrl() {
+      let image = document.querySelector("#image");
+      image.src = "image-2.jpg"
+    }
+  </script>
+</body>
+
+</html>
